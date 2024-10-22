@@ -1,2 +1,138 @@
-@import url("/CSS/global/boilerplate.css");
-@import url("/CSS/global/fonts.css");
+@import "boilerplate.css" ;
+
+:root {
+    font-size: 100%;
+
+    /* Variables */
+
+    /* Global color variables */
+
+    --color-red-100: hsl(356, 100%, 97%);
+    --color-red-200: hsl(356, 100%, 95%);
+    --color-red-300: hsl(356, 100%, 90%);
+    --color-red-400: hsl(356, 96%, 82%);
+    --color-red-500: hsl(351, 95%, 71%);
+    --color-red-600: hsl(350, 89%, 60%);
+    --color-red-700: hsl(347, 77%, 50%);
+    --color-red-800: hsl(345, 83%, 41%);
+    --color-red-900: hsl(343, 80%, 35%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-grey:  hsl(215, 28%, 17%);
+    --color-grey2: hsl(213, 5%, 84%);
+    --color-grey3: hsl(215, 28%, 25%);
+    --color-grey4: hsl(215, 30%, 22%);
+
+
+    /* background color */
+     --color-background: var(--color-grey);
+
+    /* button */
+    --color-button: var(--color-red-600);
+
+    /* body text */
+    --color-bodytext: var(--color-grey2);
+
+    /* borders */
+    --color-border-grey: var( --color-grey3);
+
+    /* input */
+    --color-input: var(--color-grey4);
+
+}
+
+*, 
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+
+/* karla-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/karla-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* karla-800 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 800;
+    src: url('/fonts/karla-v31-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+body {
+    background-color: var(--color-background);
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    color:var(--color-white);
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-weight: 800;
+    margin: 0;
+}
+
+p {
+    font-size: 1rem;
+    font-weight:400;
+    color: var(--color-bodytext);
+}
+
+@media (min-width: 20em) {
+    
+    section {
+        margin: 4em 1em;
+    }
+
+    .textContainer {
+        margin: 0 0 3em 0;
+    }
+
+    h1{
+        font-size: 2rem;
+    } 
+
+
+    .red-header {
+        color: var(--color-red-800);
+    }
+
+
+    #primaryBtn {
+        font-family: inherit;
+        background-color: var(--color-red-600);
+        border: 1px solid var(--color-red-600);
+        border-radius: 8px;
+        color: var(--color-white);
+        padding: 1em 2em;
+        width: 100%;
+        margin: 0 0 2em 0;
+        /* cursor: pointer; */
+    }
+
+    hr {
+        height: 0.5px;
+        color: var(--color-border-grey);
+        margin: 0 0 2em 0;
+    }
+
+    .inputContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    #input-one, #input-two {
+        height: 2.4375em;
+        background-color: var(--color-input);
+        width: 100%;
+        border-radius: 8px;
+        color: var(--color-red-700);
+    }
+}
